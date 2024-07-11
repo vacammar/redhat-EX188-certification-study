@@ -10,6 +10,7 @@ Try to solve all proposed exercise in `2 hours and 30 minutes`.
 
 Create without run, `httpd` container with the following parameters:
 
+- Image `docker.io/library/httpd:2.4.59`
 - Container name `webserver`
 - Run in `detached` mode
 - Expose container port `80` on `8080` host port
@@ -18,16 +19,22 @@ Create without run, `httpd` container with the following parameters:
 Open browser and verify that at the following address http://localhost:8080
 the webserver correctly response, with welcome message.
 
+**INFO:** NOT stop or remove container, this will be reused for next exercise.
+
 
 
 ## Exercise 2 - Copy file from host to container
 
-Run `httpd` container with the following parameters:
+Run `httpd` container with the following parameters, or reuse container of [Exercise 1](README.md):
 
-- Container name `webserver-with-volume`
-- Copy file [index.html](/files/index.html) from host to container directory `/var/www/html/index.html`
+- Image `docker.io/library/httpd:2.4.59`
+- Container name `webserver`
 - Run in `detached` mode
 - Expose container port `80` on `8080` host port
+
+After that container `webserver` is up and running:
+
+- Copy file [index.html](/files/index.html) from host to container directory `/usr/local/apache2/htdocs`
 
 Open your favorite browser and verify that at the following address http://localhost:8080
 the webserver correctly response, with custom `index.html` page.
@@ -38,6 +45,7 @@ the webserver correctly response, with custom `index.html` page.
 
 Run `mysql` container with the following parameters:
 
+- Image `docker.io/library/mysql:latest`
 - Container name `database`
 - Run in `detached` mode
 - Bind host directory `databasevolume` to container directory `/mysql/data`
@@ -85,7 +93,7 @@ Verify logs of container `ex188-client` and check that correctly receive respons
 
 ## Exercise 5 - Manage image
 
-- Create new tag `1.0.0` for `ex188-server` image
+- Create new tag `1.0.0` for `ex188-server` image, created on [Exercise 4](README.md)
 - Export the `ex188-server:1.0.0` image into `ex188-server.tar` file
 - Remove `ex188-server:1.0.0` image from host
 - Restore image from `ex188-server.tar`
@@ -99,7 +107,7 @@ Run multi container application, with the following parameters.
 
 ## Database
 
-- Base image `mariadb:10.6.4-focal`
+- Image `mariadb:10.6.4-focal`
 - Run container with name `wp-db`
 - Run in `detached` mode
 - Attach to `wp-network`
@@ -113,7 +121,7 @@ Run multi container application, with the following parameters.
 
 ## Wordpress
 
-- Base image `wordpress:latest`
+- Image `wordpress:latest`
 - Run container with name `wp-server`
 - Run in `detached` mode
 - Attach to `wp-network`
