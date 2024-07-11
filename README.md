@@ -66,7 +66,7 @@ Create two custom image `ex188-server` and `ex188-client` with the following par
 
 - Base image `node:18`
 - Define argument `HTTP_PORT` with default value `8080`
-- Define environment variable `HTTP_PORT` that use argument `HTTP_PORT`
+- Define environment variable `SERVER_PORT` that use argument `HTTP_PORT`
 - Define work directory `/opt`
 - Copy file [server.js](custom-image/server.js) into work directory
 - Expose `HTTP_PORT`
