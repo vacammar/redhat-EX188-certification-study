@@ -82,6 +82,7 @@ Create two custom image `ex188-server` and `ex188-client` with the following par
 - Define environment variable `SERVER_PORT`
 - Define work directory `/opt`
 - Copy file [client.sh](custom-image/client.sh) into work directory
+  - Make sure that file have rights for executions `--chmod=777`
 - Define as entrypoint the `client.sh` script
 - Run container with name `ex188-client`
 - Run in `detached` mode
@@ -94,7 +95,7 @@ Verify logs of container `ex188-client` and check that correctly receive respons
 ## Exercise 5 - Manage image
 
 - Create new tag `1.0.0` for `ex188-server` image, created on [Exercise 4](README.md)
-- Export the `ex188-server:1.0.0` image into `ex188-server.tar` file
+- Backup the `ex188-server:1.0.0` image into `ex188-server.tar` file
 - Remove `ex188-server:1.0.0` image from host
 - Restore image from `ex188-server.tar`
 - Verify that image is correctly restored
@@ -127,12 +128,16 @@ Run multi container application, with the following parameters.
 - Attach to `wp-network`
 - Set environment variables:
   - WORDPRESS_DB_HOST=`wp-db`
-  - WORDPRESS_DB_USER=`wpuser`
-  - WORDPRESS_DB_PASSWORD=`wpuser`
+  - WORDPRESS_DB_USER=`root`
+  - WORDPRESS_DB_PASSWORD=`wpadmin`
   - WORDPRESS_DB_NAME=`wp`
-- Expose container port `80` on `80` host port
+- Expose container port `8000` on `80` host port
 
-Open your favorite browser and go to the page [Wordpress configuration](http://localhost:80) page.
+Open your favorite browser and go to the page [Wordpress configuration](http://localhost:8000) page.
+
+In case of any issues, start container in debug mode, all that you do is to start container with the following environment variable:
+
+- WORDPRESS_DEBUG=`1`
 
 
 
