@@ -145,3 +145,11 @@ In case of any issues, start container in debug mode, all that you do is to star
 
 - Build container from the [Containerfile](troubleshooting/Containerfile)
 - Run container podman run --rm -d --name troubleshooting -p 8085:8085 troubleshooting
+
+
+
+## Clean you computer
+
+- Stop all containers: `podman stop --all`
+- Prune images: `podman image prune`
+- Prune networks: `podman network prune` 
