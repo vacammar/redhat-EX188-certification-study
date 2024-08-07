@@ -48,7 +48,7 @@ Run `mysql` container with the following parameters:
 - Image `docker.io/library/mysql:latest`
 - Container name `database`
 - Run in `detached` mode
-- Bind host directory `databasevolume` to container directory `/mysql/data`
+- Bind host directory `databasevolume` to container directory `/var/lib/mysql`
 - Set environment variables:
   - MYSQL_ROOT_PASSWORD=`admin`
   - MYSQL_USERNAME=`podman`
