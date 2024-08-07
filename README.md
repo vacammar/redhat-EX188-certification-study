@@ -141,7 +141,22 @@ In case of any issues, start container in debug mode, all that you do is to star
 
 
 
-## Exercise 7 - Troubleshooting
+## Exercise 7 - Multi container application with compose
+
+Create a compose file `compose.yml` that use the images of the [Exercise 4](README.md), then run applications with the
+below command:
+
+```shell
+podman compose -f compose.yml
+```
+
+Hints:
+- Configure network
+- Define environments variable 
+- Expose ports
+
+
+## Exercise 8 - Troubleshooting
 
 - Build container from the [Containerfile](troubleshooting/Containerfile)
 - Run container podman run --rm -d --name troubleshooting -p 8085:8085 troubleshooting
