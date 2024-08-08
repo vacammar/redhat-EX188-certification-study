@@ -94,11 +94,14 @@ Verify logs of container `ex188-client` and check that correctly receive respons
 
 ## Exercise 5 - Manage image
 
+For this exercise, we need of [Docker Hub](https://hub.docker.com/), [Quay.io](https://www.quay.io) or other providers, in order to push image into repository.
+
 - Create new tag `1.0.0` for `ex188-server` image, created on [Exercise 4](README.md)
 - Backup the `ex188-server:1.0.0` image into `ex188-server.tar` file
 - Remove `ex188-server:1.0.0` image from host
 - Restore image from `ex188-server.tar`
 - Verify that image is correctly restored
+- Verify through you favorite browser, if the image `ex188-server:1.0.0` is present into remote repository.
 
 
 
