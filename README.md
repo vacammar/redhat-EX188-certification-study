@@ -101,7 +101,8 @@ For this exercise, we need of [Docker Hub](https://hub.docker.com/), [Quay.io](h
 - Remove `ex188-server:1.0.0` image from host
 - Restore image from `ex188-server.tar`
 - Verify that image is correctly restored
-- Verify through you favorite browser, if the image `ex188-server:1.0.0` is present into remote repository.
+- Push `ex188-server:1.0.0` image into `test` repository
+- Verify through you favorite browser, if the image `ex188-server:1.0.0` is present into remote `test` repository.
 
 
 
