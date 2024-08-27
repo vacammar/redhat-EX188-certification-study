@@ -182,6 +182,4 @@ Hints:
 
 ## Clean you computer
 
-- Stop all containers: `podman stop --all`
-- Prune images: `podman image prune`
-- Prune networks: `podman network prune` 
+Execute [clean.sh](clean/clean.sh) script to remove all container, images, networks and volumes.
