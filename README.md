@@ -54,7 +54,7 @@ Run `mysql` container with the following parameters:
   - MYSQL_USERNAME=`podman`
   - MYSQL_PASSWORD=`ex188`
   - MYSQL_DATABASE=`exercises`
-- Expose container port `3306` on `3306` host port
+- Expose container port `3306` on `3305` host port
 
 
 
@@ -146,8 +146,20 @@ In case of any issues, start container in debug mode, all that you do is to star
 
 ## Exercise 7 - Multi container application with compose
 
-Create a compose file `compose.yml` that use the images of the [Exercise 4](README.md), then run applications with the
-below command:
+Edit file [compose.yml](compose/compose.yml) and use the images of the [Exercise 4](README.md):
+
+### Server
+
+- Container name `ex188-server`
+- Expose port`8081`
+- Network `ex188-network-ex7`
+
+### Client
+
+- Container name `ex188-client`
+- Network `ex188-network-ex7`
+
+Then run applications with the below command:
 
 ```shell
 podman compose -f compose.yml
@@ -157,6 +169,7 @@ Hints:
 - Configure network
 - Define environments variable 
 - Expose ports
+
 
 
 ## Exercise 8 - Troubleshooting
