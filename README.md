@@ -79,13 +79,14 @@ Create two custom image `ex188-server` and `ex188-client` with the following par
 ### Client
 
 - Base image `ubi8`
-- Define environment variable `SERVER_PORT`
+- Define environment variable `SERVER_PORT` with default value `8080`
 - Define work directory `/opt`
 - Copy file [client.sh](custom-image/client.sh) into work directory
   - Make sure that file have rights for executions `--chmod=777`
 - Define as entrypoint the `client.sh` script
 - Run container with name `ex188-client`
 - Run in `detached` mode
+- Set environment variable `SERVER_PORT=8080` 
 - Attach to `ex188-network`
 
 Verify logs of container `ex188-client` and check that correctly receive response from `ex188-server`.
