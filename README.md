@@ -123,8 +123,8 @@ Run multi container application, with the following parameters.
 - Bind host directory `wp-volume` to container directory `/var/lib/mysql`
 - Set environment variables:
   - MYSQL_ROOT_PASSWORD=`wpadmin`
-  - MYSQL_USERNAME=`wpuser`
-  - MYSQL_PASSWORD=`wpuser`
+  - MYSQL_USER=`wpuser`
+  - MYSQL_PASSWORD=`wppassword`
   - MYSQL_DATABASE=`wp`
 - Expose container port `3306` on `3306` host port
 
@@ -136,8 +136,8 @@ Run multi container application, with the following parameters.
 - Attach to `wp-network`
 - Set environment variables:
   - WORDPRESS_DB_HOST=`wp-db`
-  - WORDPRESS_DB_USER=`root`
-  - WORDPRESS_DB_PASSWORD=`wpadmin`
+  - WORDPRESS_DB_USER=`wpuser`
+  - WORDPRESS_DB_PASSWORD=`wppassword`
   - WORDPRESS_DB_NAME=`wp`
 - Expose container port `8000` on `80` host port
 
