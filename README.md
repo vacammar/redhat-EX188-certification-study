@@ -45,7 +45,7 @@ the webserver correctly response, with custom `index.html` page.
 
 Run `mysql` container with the following parameters:
 
-- Image `docker.io/library/mysql:latest`
+- Image `docker.io/library/mysql:9.0`
 - Container name `database`
 - Run in `detached` mode
 - Bind host directory `databasevolume` to container directory `/var/lib/mysql`
@@ -116,7 +116,7 @@ Run multi container application, with the following parameters.
 
 ## Database
 
-- Image `mariadb:10.6.4-focal`
+- Image `mariadb:10.6.4`
 - Run container with name `wp-db`
 - Run in `detached` mode
 - Attach to `wp-network`
