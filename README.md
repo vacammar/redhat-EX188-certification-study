@@ -51,11 +51,14 @@ Run `mysql` container with the following parameters:
 - Bind host directory `databasevolume` to container directory `/var/lib/mysql`
 - Set environment variables:
   - MYSQL_ROOT_PASSWORD=`admin`
-  - MYSQL_USERNAME=`podman`
+  - MYSQL_USER=`podman`
   - MYSQL_PASSWORD=`ex188`
   - MYSQL_DATABASE=`exercises`
 - Expose container port `3306` on `3305` host port
 
+Verify that mysql container working done:
+- attach interactive bash session to container
+- connect to database `mysql -u podman -p`
 
 
 ## Exercise 4 - Create custom images with Containerfile
