@@ -175,15 +175,6 @@ Hints:
 - Define environments variable 
 - Expose ports
 
-
-
-## Exercise 8 - Troubleshooting
-
-- Build container from the [Containerfile](troubleshooting/Containerfile)
-- Run container podman run --rm -d --name troubleshooting -p 8085:8085 troubleshooting
-
-
-
 ## Clean you computer
 
 Execute [clean.sh](clean/clean.sh) script to remove all container, images, networks and volumes.
